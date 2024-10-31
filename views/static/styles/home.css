@@ -1,0 +1,134 @@
+/* Import the base CSS */
+@import url('base-css-file-path.css');
+
+/* Home page specific styles */
+body {
+  padding: 20px;
+  background-color: var(--gray-light);
+}
+
+.search-container {
+  max-width: 600px;
+  width: 90%;
+  margin: 0 auto 30px;
+  position: relative;
+}
+
+#search-bar {
+  width: 100%;
+  padding: 15px 20px;
+  font-size: 18px;
+  border: 2px solid var(--purple-light);
+  border-radius: 25px;
+  outline: none;
+  transition: border-color 0.3s ease;
+}
+
+#search-bar:focus {
+  border-color: #a306c7;
+}
+
+#suggestions {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  right: 0;
+  background-color: #3f0b4b;
+  border: 1px solid #f1efefa4;
+  border-radius: 0 0 15px 15px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  max-height: 200px;
+  overflow-y: auto;
+  z-index: 1000;
+}
+
+#suggestions li {
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: background-color 0.1s ease;
+  color: var(--white);
+}
+
+#suggestions li:hover {
+  background-color: #b6509c;
+  color: var(--white);
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+}
+
+.card-link {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+  transition: transform 0.3s ease;
+}
+
+.card-link:hover {
+  transform: translateY(-5px);
+}
+
+.card {
+  background-color: var(--white);
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: box-shadow 0.3s ease;
+}
+
+.card:hover {
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 15px;
+}
+
+.card-content h2 {
+  margin: 0;
+  font-size: 18px;
+  color: var(--purple-dark);
+  font-family: 'Playfair Display', serif;
+  font-weight: 700;
+}
+
+#filter-feedback {
+  text-align: center;
+  margin: 10px 0;
+  font-style: italic;
+  color: #666;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
+  }
+  
+  .search-container {
+    width: 95%;
+  }
+}
+
+@media (max-width: 480px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+  
+  #search-bar {
+    font-size: 16px;
+    padding: 12px 15px;
+  }
+}

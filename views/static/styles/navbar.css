@@ -1,0 +1,62 @@
+/* Navbar styles */
+.navbar {
+	background-color: var(--purple-dark);
+	padding: 15px 20px;
+	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+	position: sticky;
+	top: 0;
+	z-index: 1000;
+  }
+  
+  #home {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 24px;
+	font-weight: 700;
+	color: var(--white);
+	text-decoration: none;
+	transition: color 0.3s ease;
+  }
+  
+  #home:hover {
+	color: var(--purple-light);
+  }
+  
+  /* Add a subtle gradient effect */
+  .navbar::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	right: 0;
+	height: 4px;
+	background: linear-gradient(to right, var(--purple-light), var(--purple-primary));
+  }
+  
+  /* Responsive design */
+  @media (max-width: 768px) {
+	.navbar {
+	  padding: 10px 15px;
+	}
+  
+	#home {
+	  font-size: 20px;
+	}
+  }
+  
+  /* Optional: Add animation for the gradient */
+  @keyframes gradientAnimation {
+	0% {
+	  background-position: 0% 50%;
+	}
+	50% {
+	  background-position: 100% 50%;
+	}
+	100% {
+	  background-position: 0% 50%;
+	}
+  }
+  
+  .navbar::after {
+	animation: gradientAnimation 5s ease infinite;
+	background-size: 200% 200%;
+  }

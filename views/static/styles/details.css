@@ -1,0 +1,124 @@
+/* Import the base CSS */
+@import url('base-css-file-path.css');
+
+/* Details page specific styles */
+body {
+  background-color: var(--gray-light);
+  padding: 20px;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.card {
+  background-color: var(--white);
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+.artist-details-card {
+  display: flex;
+  flex-direction: column;
+}
+
+@media (min-width: 768px) {
+  .artist-details-card {
+    flex-direction: row;
+  }
+}
+
+.artist-details-card img {
+  width: 100%;
+  max-width: 300px;
+  height: auto;
+  object-fit: cover;
+}
+
+.card-content {
+  padding: 20px;
+}
+
+.card-content h2 {
+  color: var(--purple-dark);
+  font-family: 'Playfair Display', serif;
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.card-content ul {
+  list-style-type: none;
+  padding: 0;
+}
+
+.card-content ul li {
+  margin-bottom: 10px;
+}
+
+.card-container {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+@media (min-width: 768px) {
+  .card-container {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.locations-card,
+.dates-card,
+.relations-card {
+  height: 100%;
+}
+
+.locations-card h3,
+.dates-card h3,
+.relations-card h3 {
+  color: var(--purple-primary);
+  font-family: 'Montserrat', sans-serif;
+  font-size: 20px;
+  margin-bottom: 15px;
+  padding: 15px 20px 0;
+}
+
+.locations-card ul,
+.dates-card ul,
+.relations-card ul {
+  list-style-type: none;
+  padding: 0 20px 20px;
+  margin: 0;
+}
+
+.locations-card li,
+.dates-card li,
+.relations-card li {
+  margin-bottom: 8px;
+  font-size: 14px;
+}
+
+.back-button {
+  display: inline-block;
+  background-color: var(--purple-primary);
+  color: var(--white);
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 16px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.back-button:hover {
+  background-color: var(--purple-light);
+}
+
+.back-button a {
+  color: var(--white);
+  text-decoration: none;
+}

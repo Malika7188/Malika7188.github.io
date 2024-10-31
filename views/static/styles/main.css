@@ -1,0 +1,17 @@
+/* General Styles */
+body {
+
+    background: url('../images/image1.jpg') ; 
+    background-size: cover; /* Ensures the image covers the entire background */
+    background-repeat: no-repeat;  /* Prevents the GIF from repeating */
+    background-position: center center;  /* Centers the GIF on the page */
+    background-attachment: fixed;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    color: white;
+    font-size: 1.2rem;
+    height: 100vh;
+}
+

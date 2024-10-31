@@ -1,0 +1,68 @@
+/* Wrapper for the footer */
+.footer-wrapper {
+    width: 100%;
+    background-color: transparent;
+    padding: 20px;
+    box-shadow: 0 -2px 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Authors Section */
+.authors-section {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.authors-section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+    color: #e7d0d0;
+}
+
+.author-list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.author {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.author-img {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.author-name {
+    font-size: 1rem;
+    color: #e7d0d0;
+}
+
+/* Footer Content */
+.site-footer {
+    border-top: 1px solid #ddd;
+    padding-top: 15px;
+    text-align: center;
+    width: 100%;
+    color: #e7d0d0;
+}
+
+.site-footer .footer-content span {
+    font-size: 1rem;
+    color: #2448eb;
+}
+
+/* Responsive Adjustments */
+@media screen and (max-width: 768px) {
+    .author-list {
+        flex-direction: column;
+    }
+}
