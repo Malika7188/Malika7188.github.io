@@ -15,7 +15,7 @@
     }
 
     body {
-      background-color: #eee8e8;
+      background-color: #29282823;
       color: #ffffff;
       line-height: 1.6;
     }
@@ -39,9 +39,11 @@
     }
 
     .logo {
-      font-size: 1.5rem;
+      font-size: 2rem;
       font-weight: bold;
-      color: #b5e0eb;
+      color: #e3eaec;
+      padding: left 2px;
+      ;
     }
 
     .nav-links {
@@ -59,6 +61,41 @@
       color: #bbaaf7;
     }
 
+    .hero h1 {
+      font-size: 3.5rem;
+      margin-bottom: 1rem;
+      color: #1e1f1f;
+
+    }
+
+    .hero p {
+      font-size: 2rem;
+      margin-bottom: 2rem;
+      color: #6f6262;
+    }
+
+    .cta-button {
+      display: inline-block;
+      padding: 1rem 2rem;
+      background-color: #1e1f1f;
+      color: white;
+      text-decoration: none;
+      border-radius: 15px;
+      transition: transform 0.3s ease, background-color 0.3s ease;
+      box-shadow: 0 4px 4px rgba(0, 0, 0, 0.1);
+    }
+
+    .cta-button:hover {
+      background-color: #434c50;
+      transform: translateY(-2px);
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    .cta-button:active {
+      transform: translateY(0);
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    }
+
     .hero {
       height: 100vh;
       display: flex;
@@ -66,7 +103,7 @@
       justify-content: center;
       text-align: center;
       padding: 2rem;
-      background: linear-gradient(45deg, #0a0a0a, #1a1a1a);
+      background: linear-gradient(45deg, #f5fafd, #a4cffa9e);
     }
 
     .hero-content {
@@ -79,48 +116,6 @@
       gap: 2rem;
     }
 
-    .profile-image {
-      width: 200px;
-      height: 200px;
-      border-radius: 50%;
-      border: 4px solid #85c6f1;
-      overflow: hidden;
-      margin-bottom: 1rem;
-    }
-
-    .profile-image img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
-
-    .hero h1 {
-      font-size: 3.5rem;
-      margin-bottom: 1rem;
-      color: #85c6f1;
-    }
-
-    .hero p {
-      font-size: 1.2rem;
-      margin-bottom: 2rem;
-      color: #888;
-    }
-
-    .cta-button {
-      display: inline-block;
-      padding: 1rem 2rem;
-      background-color: #85c6f1;
-      color: white;
-      text-decoration: none;
-      border-radius: 5px;
-      transition: transform 0.3s ease, background-color 0.3s ease;
-    }
-
-    .cta-button:hover {
-      transform: translateY(-3px);
-      background-color: #45a049;
-    }
-
     .section {
       padding: 5rem 2rem;
       max-width: 1200px;
@@ -130,20 +125,42 @@
     .section h2 {
       font-size: 2.5rem;
       margin-bottom: 2rem;
-      color: #85c6f1;
+      color: #052338;
     }
 
+    /* Updated styles for about section */
     .about-content {
-      display: grid;
-      grid-template-columns: 1fr;
+      display: flex;
       gap: 2rem;
       padding: 2rem;
       background-color: #111111;
       border-radius: 10px;
       margin-top: 2rem;
+      align-items: flex-start;
+    }
+
+    .profile-container {
+      flex: 0 0 300px;
+      margin-right: 2rem;
+    }
+
+    .profile-image {
+      width: 100%;
+      height: 300px;
+      border-radius: 10px;
+      border: 4px solid #f7f9fa;
+      overflow: hidden;
+      margin: 0;
+    }
+
+    .profile-image img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
     }
 
     .about-text {
+      flex: 1;
       color: #ddd;
       font-size: 1.1rem;
       line-height: 1.8;
@@ -152,6 +169,23 @@
       padding: 15px;
       border-left: 4px solid #757677;
       background-color: #0a0a0a;
+    }
+
+    /* Media query for responsive layout */
+    @media (max-width: 768px) {
+      .about-content {
+        flex-direction: column;
+      }
+
+      .profile-container {
+        width: 100%;
+        margin-right: 0;
+        margin-bottom: 2rem;
+      }
+
+      .profile-image {
+        height: 250px;
+      }
     }
 
     .projects-grid {
@@ -194,7 +228,7 @@
     .project-image img {
       width: 100%;
       height: 100%;
-      object-fit:contain;
+      object-fit: cover;
       /* This ensures the image covers the area without distortion */
       transition: transform 0.3s ease;
       /* Optional: adds smooth zoom effect on hover */
@@ -218,7 +252,7 @@
     }
 
     .project-card h3 {
-      color: #85c6f1;
+      color: #ededf2;
       margin: 1rem 0 0.5rem 0;
     }
 
@@ -239,7 +273,7 @@
     }
 
     .social-links a {
-      color: #fff;
+      color: #020202;
       font-size: 2rem;
       transition: all 0.3s ease;
     }
@@ -293,7 +327,7 @@
 <body>
   <header>
     <nav>
-      <div class="logo">Portfolio</div>
+      <div class="logo">Malika</div>
       <div class="nav-links">
         <a href="#home">Home</a>
         <a href="#about">About</a>
@@ -305,11 +339,11 @@
 
   <section class="hero" id="home">
     <div class="hero-content">
-      <div class="profile-image">
-        <img src="https://avatars.githubusercontent.com/u/162885712?v=4" alt="Profile Picture" />
-      </div>
+
       <div class="text-content">
-        <h1>Hi, I'm Asman Malika</h1>
+        <h1>Hi!</h1>
+        <h1>I'm</h1>
+        <h1>Asman Malika</h1>
         <p>Full Stack Developer & Designer</p>
         <a href="#contact" class="cta-button">Get in Touch</a>
       </div>
@@ -319,6 +353,11 @@
   <section class="section" id="about">
     <h2 class="slide-in">About Me</h2>
     <div class="about-content slide-in">
+      <div class="profile-container">
+        <div class="profile-image">
+          <img src="https://avatars.githubusercontent.com/u/162885712?v=4" alt="Profile Picture" />
+        </div>
+      </div>
       <div class="about-text">
         <p>
           I'm a passionate full-stack developer driven by an insatiable curiosity
@@ -354,37 +393,45 @@
     </div>
   </section>
 
+
   <section class="section" id="projects">
     <h2 class="slide-in">My Projects</h2>
     <div class="projects-grid">
-      <a href="https://learn.zone01kisumu.ke/git/masman/Ecommerce.git" style="text-decoration: none; color: inherit" target="_blank">
+       <a href="https://github.com/Malika7188/Tetris-Optimizer.git" style="text-decoration: none; color: inherit" target="_blank">
         <div class="project-card slide-in">
           <div class="project-image">
-            <img src="https://valleycultural.org/wp-content/uploads/2021/07/Music-2048x1364.jpg" alt="Project Image" />
+            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQuAhFpd3QSGaXoeAJ9HCg1fEwd0GBmDgVpTw&s"
+              alt="Project Image" />
           </div>
           <h3>Ecommerce</h3>
           <p>Ecommerce is an online platform designed for selling clothes and shoes.
             The platform aims to provide a user-friendly experience, allowing customers
-            to easily browse, select, and purchase items. </p>
+            to easily browse, select, and purchase items.
+          </p>
         </div>
       </a>
-      <a href="https://github.com/adiozdaniel/ascii-art" style="text-decoration: none; color: inherit" target="_blank">
+      <a href="https://learn.zone01kisumu.ke/git/kada/groupie-tracker.git" style="text-decoration: none; color: inherit" target="_blank">
         <div class="project-card slide-in">
           <div class="project-image">
-            <img src="https://www.panosfx.com/templates/yootheme/cache/30/portrait-306006fe.webp" alt="Project Image" />
+            <img src="https://www.alexisprovo.fr/static/images/projects/instartists/instartists.png"
+              alt="Project Image" />
           </div>
-          <h3>Ascci Art</h3>
-          <p>Manipulating Ascci To Display Different Texts on Cli And Web</p>
+          <h3>Ecommerce</h3>
+          <p>Groupie Tracker is a web application that allows users to track and
+             manage their favorite musical artists provides information on artists' biographies, discographies, 
+            tour dates, and venues.
+          </p>
         </div>
       </a>
-      <a href= "https://github.com/Malika7188/Tetris-Optimizer.git" style="text-decoration: none; color: inherit" target="_blank">
+      <a href="https://github.com/Malika7188/Tetris-Optimizer.git" style="text-decoration: none; color: inherit" target="_blank">
         <div class="project-card slide-in">
           <div class="project-image">
-            <img src="https://static0.gamerantimages.com/wordpress/wp-content/uploads/2022/11/Tetris-Blocks_Tetris.jpg" alt="Project Image" />
+            <img src="https://static0.gamerantimages.com/wordpress/wp-content/uploads/2022/11/Tetris-Blocks_Tetris.jpg"
+              alt="Project Image" />
           </div>
           <h3>Tetris-Optimizer</h3>
           <p>
-          Calculates the best possible moves to clear lines efficiently and achieve high scores in Tetris.
+            Calculates the best possible moves to clear lines efficiently and achieve high scores in Tetris.
           </p>
         </div>
       </a>
@@ -439,7 +486,7 @@
     });
   </script>
 </body>
-<script>
+<!-- <script>
   // Create floating particles effect
   function createParticles() {
     const particlesContainer = document.createElement('div');
@@ -462,6 +509,6 @@
 
   // Initialize particles
   createParticles();
-</script>
+</script> -->
 
 </html>
