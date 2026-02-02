@@ -68,3 +68,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
   function animateText() {
     typeText(textElement, text, 150, function () {
+      setTimeout(animateText, 1000); // Restart typing after a short delay
+    });
+  }
+
+  animateText(); // Start the animation on page load
+});
+
+// Skill scrolling section with hover pause functionality
+document.addEventListener('DOMContentLoaded', function () {
+  const skillList = document.querySelector('.skill-list');
+
+  // Function to pause animation
+  skillList.addEventListener('mouseenter', function () {
+    skillList.style.animationPlayState = 'paused';
