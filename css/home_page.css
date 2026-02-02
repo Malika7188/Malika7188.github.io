@@ -958,3 +958,63 @@ nav {
   font-weight: 500;
   box-shadow: 0 4px 15px rgba(91, 106, 191, 0.3);
 }
+
+/* typing animation */
+.typed-cursor--blink {
+  display: inline-block;
+  animation: blink 0.7s infinite;
+}
+@keyframes blink {
+  0%, 100% { opacity: 1; }
+  50% { opacity: 0; }
+}
+
+
+  /* Green underline */
+  .typed {
+    display: inline-block;
+    position: relative;
+  }
+
+  .underline {
+    content: "";
+    position: absolute;
+    bottom: -2px; /* Adjust for a little spacing from the text */
+    left: 0;
+    width: 0;
+    height: 2px;
+    background-color: #5b6abf;
+    transition: width 0.3s ease;
+  }
+
+.cta-button:hover {
+  transform: translateY(-3px);
+  background-color: #4a59a8;
+  box-shadow: 0 6px 20px rgba(91, 106, 191, 0.4);
+}
+
+/* Mobile Navigation */
+.mobile-menu-btn {
+  display: none;
+  cursor: pointer;
+  background: none;
+  border: none;
+  color: #2d2d2d;
+  font-size: 1.5rem;
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .hero h1 {
+    font-size: 3.5rem;
+  }
+
+  .text-content div {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-width: 768px) {
+  nav {
+    padding: 0 1rem;
+  }
