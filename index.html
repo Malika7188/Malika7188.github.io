@@ -297,3 +297,26 @@
             console.log('Form submitted');
             event.preventDefault(); // Prevent default form submission
 
+            const formData = new FormData(this);
+            console.log('FormData created:', formData);
+
+            fetch(this.action, {
+              method: 'POST',
+              body: formData,
+              headers: {
+                'Accept': 'application/json'
+              }
+            })
+              .then(response => {
+                console.log('Response received:', response);
+                if (response.ok) {
+                  console.log('Response is OK');
+                  document.getElementById('form-message-success').style.display = 'block';
+                  console.log('Success message displayed');
+
+                  // Clear form fields
+                  inputs.forEach(input => {
+                    console.log('Clearing input:', input);
+                    input.value = '';
+                  });
+
