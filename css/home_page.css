@@ -358,3 +358,63 @@ nav {
 }
 
 /* Project Info */
+.project-info {
+  padding: 0.5rem 0;
+  position: relative;
+  z-index: 1;
+}
+
+/* Project Description */
+.project-description {
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+/* Project Tags */
+.project-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  margin-top: 0.75rem;
+}
+
+.project-tags span {
+  background: rgba(91, 106, 191, 0.15);
+  color: #5b6abf;
+  padding: 0.3rem 0.75rem;
+  border-radius: 20px;
+  font-size: 0.8rem;
+  border: 1px solid rgba(91, 106, 191, 0.3);
+  transition: all 0.3s ease;
+}
+
+/* .project-card:hover .project-tags span {
+  background: rgba(91, 106, 191, 0.25);
+  border-color: rgba(91, 106, 191, 0.5);
+} */
+
+/* Project card as link */
+a.project-card {
+  text-decoration: none;
+  color: inherit;
+  display: block;
+}
+
+/* end of project-image */
+
+.contact-section {
+  background: white;
+  /* background: linear-gradient(45deg, #ececee, #ebedf5); */
+  color: #2d2d2d;
+  padding: 4rem 0;
+}
+
+.container {
+  max-width: 80%;
+  margin: 0 auto;
+}
+
+.section-heading-wrap {
+  text-align: center;
