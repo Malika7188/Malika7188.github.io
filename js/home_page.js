@@ -124,3 +124,18 @@ document.addEventListener("DOMContentLoaded", function () {
       underline.style.width = (charIndex / currentItem.length) * 100 + "%";  // Adjust the width of the underline
       setTimeout(type, typingSpeed);
     } else if (isDeleting && charIndex > 0) {
+      typedElement.textContent = currentItem.substring(0, charIndex - 1);
+      charIndex--;
+      underline.style.width = (charIndex / currentItem.length) * 100 + "%";  // Adjust the width of the underline
+      setTimeout(type, erasingSpeed);
+    } else {
+      isDeleting = !isDeleting;
+      if (!isDeleting) {
+        itemIndex = (itemIndex + 1) % items.length;
+      }
+      setTimeout(type, delayBetweenItems);
+    }
+  }
+
+  type();
+});
