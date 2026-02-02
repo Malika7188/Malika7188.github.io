@@ -40,3 +40,17 @@ function createParticles() {
     particle.style.top = Math.random() * 100 + '%';
     particle.style.setProperty('--tx', Math.random() * 200 - 100 + 'px');
     particle.style.setProperty('--ty', Math.random() * 200 - 100 + 'px');
+    particle.style.animationDelay = Math.random() * 3 + 's';
+    particlesContainer.appendChild(particle);
+  }
+}
+
+// Initialize particles
+createParticles();
+
+// Ensure the typing takes place entirely within the container
+document.addEventListener('DOMContentLoaded', function () {
+  const textElement = document.getElementById('animated-text');
+  const text = textElement.innerHTML;
+
+  function typeText(element, text, speed, callback) {
