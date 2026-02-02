@@ -82,3 +82,17 @@ document.addEventListener('DOMContentLoaded', function () {
   // Function to pause animation
   skillList.addEventListener('mouseenter', function () {
     skillList.style.animationPlayState = 'paused';
+  });
+
+  // Function to resume animation
+  skillList.addEventListener('mouseleave', function () {
+    skillList.style.animationPlayState = 'running';
+  });
+});
+
+document.addEventListener('DOMContentLoaded', () => {
+  const mobileMenuBtn = document.querySelector('.mobile-menu-btn');
+  const navLinks = document.querySelector('.nav-links');
+
+  mobileMenuBtn.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
