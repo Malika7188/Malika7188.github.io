@@ -658,3 +658,63 @@ footer {
 
 .skill-list {
   padding: 0;
+  list-style-type: none;
+  display: inline-flex;
+  animation: scroll 30s linear infinite; /* Continuous scroll */
+}
+
+.skill-list li {
+  display: inline-block;
+  margin: 15px;
+  font-size: 20px;
+  transition: transform 0.3s;
+}
+
+.skill-list li:hover {
+  transform: scale(1.1);
+}
+
+.skill-logo {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+  vertical-align: middle;
+  margin-right: 8px;
+}
+
+/* Animation for the right-to-left scroll */
+@keyframes scrollLeft {
+  0% {
+    transform: translateX(100%); /* Start from the right */
+  }
+  100% {
+    transform: translateX(-100%); /* End at the left */
+  }
+}
+
+.scroll-text {
+  animation: scrollLeft 10s linear infinite;
+}
+
+/* Keyframes for continuous scrolling effect */
+@keyframes scroll {
+  0% {
+    transform: translateX(1%);
+  }
+  100% {
+    transform: translateX(-80%); /* Scroll halfway to the end of the list */
+  }
+}
+
+/* Fade-in effect for headings */
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
