@@ -1078,3 +1078,63 @@ nav {
 /* Animation Keyframes */
 @keyframes fadeInUp {
   to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.hero {
+  min-height: 100vh;
+  padding: 6rem 2rem;
+  background: linear-gradient(
+    135deg,
+    rgba(240, 244, 255, 0.95) 0%,
+    rgba(232, 238, 255, 0.95) 100%
+  );
+  position: relative;
+  overflow: hidden;
+}
+
+.hero::before {
+  content: '';
+  position: absolute;
+  width: 200%;
+  height: 200%;
+  background: radial-gradient(
+    circle at center,
+    rgba(91, 106, 191, 0.1) 0%,
+    transparent 50%
+  );
+  animation: rotate 20s linear infinite;
+  z-index: 1;
+}
+
+.hero-content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 4rem;
+  align-items: center;
+  position: relative;
+  z-index: 2;
+}
+
+.profile-container {
+  position: relative;
+  width: 100%;
+}
+
+.profile-container .profile-about {
+  width: auto;
+  height: 450px;
+  display: inline-block;
+}
+
+.profile-container .profile-about img {
+  width: auto;
+  height: 100%;
+  object-fit: contain;
+}
+
+.profile-container {
