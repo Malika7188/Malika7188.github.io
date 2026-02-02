@@ -320,3 +320,33 @@
                     input.value = '';
                   });
 
+                  // Hide success message after 2 seconds
+                  setTimeout(() => {
+                    document.getElementById('form-message-success').style.display = 'none';
+                    console.log('Success message hidden');
+                  }, 2000);
+                } else {
+                  throw new Error('Something went wrong.');
+                }
+              })
+              .catch(error => {
+                console.error('Error occurred:', error);
+                document.getElementById('form-message-warning').innerText = error.message;
+                document.getElementById('form-message-warning').style.display = 'block';
+              });
+          });
+
+          // Log initial state of form
+          console.log('Initial form state:');
+          inputs.forEach(input => {
+            console.log(input.id + ':', input.value);
+          });
+        });
+      </script>
+    </section>
+    <script src="/js/home_page.js"></script>
+    <footer>
+      <p>&copy; 2024 Hillary Ombima. All rights reserved.</p>
+    </footer>
+  </body>
+</html>
