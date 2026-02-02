@@ -96,3 +96,17 @@ document.addEventListener('DOMContentLoaded', () => {
 
   mobileMenuBtn.addEventListener('click', () => {
     navLinks.classList.toggle('active');
+  });
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+  const typedElement = document.querySelector(".typed");
+  const cursorElement = document.querySelector(".typed-cursor");
+  const items = typedElement.getAttribute("data-typed-items").split(",").map(item => item.trim()).filter(item => item);
+  
+  // Create a span for the underline
+  const underline = document.createElement("span");
+  underline.classList.add("underline");
+  typedElement.appendChild(underline);
+
+  let itemIndex = 0;
