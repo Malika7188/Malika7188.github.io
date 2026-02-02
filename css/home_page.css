@@ -1,0 +1,60 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f0f4ff;
+  color: #2d2d2d;
+  line-height: 1.6;
+}
+
+header {
+  background-color: #ffffff;
+  padding: 1rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.08);
+}
+
+nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+  color: #5b6abf;
+  transition: colar 0.3s ease;
+}
+
+.logo a {
+  color: inherit; /* Inherit the color from .logo */
+  text-decoration: none; /* Remove underline */
+}
+
+.logo a:hover {
+  color: #4a59a8; /* Change color on hover */
+}
+
+.nav-links {
+  display: flex;
+  gap: 2rem;
+}
+
+.nav-links a {
+  color: #2d2d2d;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+  color: #5b6abf;
