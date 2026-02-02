@@ -77,16 +77,14 @@ document.addEventListener('DOMContentLoaded', function () {
 
 // Skill scrolling section with hover pause functionality
 document.addEventListener('DOMContentLoaded', function () {
-  const skillList = document.querySelector('.skill-list');
+  document.querySelectorAll('.skill-list').forEach(function (skillList) {
+    skillList.addEventListener('mouseenter', function () {
+      skillList.style.animationPlayState = 'paused';
+    });
 
-  // Function to pause animation
-  skillList.addEventListener('mouseenter', function () {
-    skillList.style.animationPlayState = 'paused';
-  });
-
-  // Function to resume animation
-  skillList.addEventListener('mouseleave', function () {
-    skillList.style.animationPlayState = 'running';
+    skillList.addEventListener('mouseleave', function () {
+      skillList.style.animationPlayState = 'running';
+    });
   });
 });
 
