@@ -298,3 +298,63 @@ nav {
 
 .project-image img {
   width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.5s ease;
+}
+
+.project-card:hover .project-image img {
+  transform: scale(1.1);
+}
+
+/* Project Text Content */
+.project-card h3 {
+  color: #5b6abf;
+  font-size: 1.4rem;
+  margin: 1rem 0;
+  transition: color 0.3s ease;
+}
+
+.project-card:hover h3 {
+  color: #4a59a8;
+}
+
+.project-card p {
+  color: #666;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+
+/* Project Links */
+.project-card a {
+  color: inherit;
+  text-decoration: none;
+  display: block;
+  height: 100%;
+}
+
+/* Project Card Overlay */
+.project-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(255, 255, 255, 0.9);
+  padding: 1rem;
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+}
+
+.project-card:hover .project-overlay {
+  transform: translateY(0);
+}
+
+/* Section Title */
+.section-title {
+  font-size: 2.5rem;
+  color: #5b6abf;
+  margin-bottom: 3rem;
+}
+
+/* Project Info */
