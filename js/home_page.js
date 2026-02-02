@@ -54,3 +54,17 @@ document.addEventListener('DOMContentLoaded', function () {
   const text = textElement.innerHTML;
 
   function typeText(element, text, speed, callback) {
+    let index = 0;
+    element.innerHTML = ''; // Clear the content for typing effect
+    const interval = setInterval(() => {
+      element.innerHTML += text[index];
+      index++;
+      if (index === text.length) {
+        clearInterval(interval);
+        if (callback) callback(); // Call the callback once typing is complete
+      }
+    }, speed);
+  }
+
+  function animateText() {
+    typeText(textElement, text, 150, function () {
