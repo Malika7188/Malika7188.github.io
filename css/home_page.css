@@ -598,3 +598,63 @@ img[src*='Go-Logo_Blue.png'] {
   font-size: 2rem;
   transition: all 0.3s ease;
 }
+
+.social-links a:hover {
+  color: #5b6abf;
+  transform: translateY(-5px);
+}
+
+@keyframes fadeInUp {
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.slide-in {
+  opacity: 0;
+  /* color: #5b6abf; */
+  transform: translateX(-30px);
+  transition: all 0.8s ease;
+}
+
+.slide-in.active {
+  opacity: 1;
+  transform: translateX(0);
+}
+
+footer {
+  background-color: #ffffff;
+  padding: 2rem;
+  text-align: center;
+  margin-top: 4rem;
+  font-size: 0.9rem;
+  color: #555;
+}
+
+/* Basic styling */
+.section-skills {
+  padding: 50px 0;
+  padding: 5rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.slide-in {
+  animation: fadeIn 1s ease-in-out;
+  animation: slideIn 1s ease forwards;
+}
+
+.section-skills h2 {
+  font-size: 2.5rem;
+}
+
+.skill-text {
+  overflow: hidden;
+  white-space: nowrap;
+  text-align: center;
+  cursor: pointer;
+}
+
+.skill-list {
+  padding: 0;
