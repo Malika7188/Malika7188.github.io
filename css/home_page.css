@@ -718,3 +718,63 @@ footer {
   }
 }
 
+@media (max-width: 768px) {
+  .nav-links {
+    display: none;
+  }
+
+  .hero h1 {
+    font-size: 2.5rem;
+  }
+
+  .social-links {
+    flex-wrap: wrap;
+  }
+}
+
+/* Base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: whitesmoke;
+  color: #2d2d2d;
+  line-height: 1.6;
+}
+
+/* Enhanced Header */
+header {
+  background-color: rgba(255, 255, 255, 0.95);
+  padding: 1rem;
+  position: fixed;
+  width: 100%;
+  top: 0;
+  z-index: 1000;
+  backdrop-filter: blur(10px);
+  transition: all 0.3s ease;
+}
+
+header.scrolled {
+  padding: 0.5rem;
+  background-color: rgba(255, 255, 255, 0.98);
+}
+
+nav {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 2rem;
+}
+
+/* Enhanced Logo */
+.logo {
+  font-size: 1.8rem;
+  font-weight: bold;
+  color: #5b6abf;
+  transition: all 0.3s ease;
