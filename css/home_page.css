@@ -1378,3 +1378,63 @@ nav {
     font-size: 2.5rem;
   }
 
+  .section-skills h2 {
+    font-size: 1.5rem;
+  }
+
+  .text-content .typed-text {
+    font-size: 1.3rem;
+  }
+
+  .cta-button {
+    margin: 0 auto;
+  }
+
+  .contact-section {
+    padding: 4rem 1rem;
+  }
+  
+  .section-heading-wrap h2 {
+    font-size: 2rem;
+  }
+  
+  .flex {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+  
+  .form-outline-style-v1 input,
+  .form-outline-style-v1 textarea {
+    font-size: 0.9rem;
+    padding: 0.875rem;
+  }
+  
+  .contact-info-v1 {
+    margin-top: 2rem;
+    padding: 1.5rem;
+  }
+  
+  .contact-info-v1 h6 {
+    font-size: 1rem;
+  }
+  
+  .w-full.md\:w-1\/2,
+  .w-full.md\:w-1\/3 {
+    width: 100%;
+  }
+
+}
+
+@media (max-width: 480px) {
+  .hero {
+    padding: 4rem 1rem;
+  }
+
+  #projects h2 {
+    font-size: 2rem;
+  }
+
+  .section-skills h2 {
+    font-size: 2rem;
+  }
+
