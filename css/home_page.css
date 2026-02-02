@@ -898,3 +898,63 @@ nav {
   overflow: hidden;
   box-shadow: 0 0 25px rgba(91, 106, 191, 0.3);
   transition: all 0.3s ease;
+  order: 2;
+}
+
+.profile-about img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.profile-about:hover img {
+  transform: scale(1.1);
+}
+
+.profile-about:hover {
+  transform: scale(1.05);
+  box-shadow: 0 0 35px rgba(91, 106, 191, 0.4);
+}
+
+.profile-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.profile-image:hover img {
+  transform: scale(1.05);
+}
+
+/* Enhanced Typography */
+.hero h1 {
+  font-size: 4rem;
+  margin-bottom: 1rem;
+  color: #5b6abf;
+  text-shadow: 0 0 10px rgba(91, 106, 191, 0.3);
+  letter-spacing: 1px;
+}
+
+.text-content div {
+  font-size: 1.4rem;
+  margin-bottom: 2rem;
+  color: #666;
+  font-weight: 300;
+  letter-spacing: 0.5px;
+}
+
+/* Enhanced CTA Button */
+.cta-button {
+  display: inline-block;
+  padding: 1.2rem 2.5rem;
+  background-color: #5b6abf;
+  color: white;
+  text-decoration: none;
+  border-radius: 50px;
+  transition: all 0.3s ease;
+  font-size: 1.1rem;
+  font-weight: 500;
+  box-shadow: 0 4px 15px rgba(91, 106, 191, 0.3);
+}
