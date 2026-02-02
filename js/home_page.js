@@ -110,3 +110,17 @@ document.addEventListener("DOMContentLoaded", function () {
   typedElement.appendChild(underline);
 
   let itemIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+  const typingSpeed = 100;
+  const erasingSpeed = 50;
+  const delayBetweenItems = 1500;
+
+  function type() {
+    const currentItem = items[itemIndex];
+    if (!isDeleting && charIndex < currentItem.length) {
+      typedElement.textContent += currentItem.charAt(charIndex);
+      charIndex++;
+      underline.style.width = (charIndex / currentItem.length) * 100 + "%";  // Adjust the width of the underline
+      setTimeout(type, typingSpeed);
+    } else if (isDeleting && charIndex > 0) {
