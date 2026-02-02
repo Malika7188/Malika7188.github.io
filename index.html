@@ -274,3 +274,26 @@
 
             <div class="w-full md:w-1/3 mb-6">
               <div class="contact-info-v1">
+                <div class="gsap-reveal">
+                  <span class="block text-gray-400">Email</span>
+                  <h6 class="text-lg text-white">asmanodeny@gmail.com@gmail.com</h6>
+                </div>                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <script>
+        document.addEventListener('DOMContentLoaded', function () {
+          console.log('DOM fully loaded and parsed');
+
+          const form = document.getElementById('contactForm');
+          console.log('Form element:', form);
+
+          const inputs = form.querySelectorAll('input[type="text"], input[type="email"], textarea');
+          console.log('Input elements:', inputs);
+
+          form.addEventListener('submit', function (event) {
+            console.log('Form submitted');
+            event.preventDefault(); // Prevent default form submission
+
