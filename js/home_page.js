@@ -26,3 +26,17 @@ document.querySelectorAll('a[href^="#"]').forEach((anchor) => {
 });
 
 // Create floating particles effect
+function createParticles() {
+  const particlesContainer = document.createElement('div');
+  particlesContainer.className = 'particles';
+  document.body.appendChild(particlesContainer);
+
+  for (let i = 0; i < 50; i++) {
+    const particle = document.createElement('div');
+    particle.className = 'particle';
+    particle.style.width = Math.random() * 5 + 'px';
+    particle.style.height = particle.style.width;
+    particle.style.left = Math.random() * 100 + '%';
+    particle.style.top = Math.random() * 100 + '%';
+    particle.style.setProperty('--tx', Math.random() * 200 - 100 + 'px');
+    particle.style.setProperty('--ty', Math.random() * 200 - 100 + 'px');
