@@ -418,3 +418,63 @@ a.project-card {
 
 .section-heading-wrap {
   text-align: center;
+  margin-bottom: 3rem;
+}
+
+.section-heading-wrap h2 {
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: #2d2d2d;
+  margin-bottom: 1rem;
+}
+
+.flex {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: space-between;
+  padding: 0 1rem;
+}
+
+/* Form Styles */
+.form-outline-style-v1 {
+  width: 100%;
+}
+
+.form-group {
+  margin-bottom: 1.5rem;
+}
+
+.form-outline-style-v1 input,
+.form-outline-style-v1 textarea {
+  width: 100%;
+  background-color: #ffffff;
+  border: 1px solid #d0d5e0;
+  border-radius: 8px;
+  padding: 1rem;
+  margin: 8px;
+  color: #2d2d2d;
+  transition: all 0.3s ease;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.form-outline-style-v1 input:focus,
+.form-outline-style-v1 textarea:focus {
+  outline: none;
+  border-color: #5b6abf;
+  box-shadow: 0 0 0 2px rgba(91, 106, 191, 0.2);
+}
+
+.form-outline-style-v1 input::placeholder,
+.form-outline-style-v1 textarea::placeholder {
+  color: #6b7280;
+}
+
+/* Submit Button */
+.form-outline-style-v1 input[type="submit"] {
+  background-color: transparent;
+  border: 2px solid #5b6abf;
+  color: #5b6abf;
+  font-weight: 600;
+  padding: 0.75rem 2rem;
+  border-radius: 9999px;
