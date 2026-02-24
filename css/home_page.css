@@ -1236,18 +1236,21 @@ nav {
 }
 
 .profile-about {
-  width: 40%;
-  border-radius: 8%;
+  width: 380px;
+  height: 420px;
+  border-radius: 12px;
   overflow: hidden;
   box-shadow: 0 0 25px rgba(91, 106, 191, 0.3);
   transition: all 0.3s ease;
   order: 2;
+  flex-shrink: 0;
 }
 
 .profile-about img {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  object-position: center top;
   transition: transform 0.3s ease;
 }
 
@@ -1620,8 +1623,8 @@ nav {
   }
 
   .profile-about {
-    width: 60%;
-    height: 350px;
+    width: 320px;
+    height: 380px;
     order: 2;
   }
   
@@ -1711,8 +1714,8 @@ nav {
   }
 
   .profile-about {
-    width: 80%;
-    height: 300px;
+    width: 100%;
+    height: 320px;
   }
 
   .about-content {
@@ -1813,7 +1816,7 @@ nav {
 
   .profile-about {
     width: 100%;
-    height: 250px;
+    height: 280px;
   }
 
   .about-text {
